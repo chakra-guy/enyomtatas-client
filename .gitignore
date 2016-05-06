@@ -1,0 +1,12 @@
+node_modules
+logs
+www
+npm-debug
+uploads
+server/db/journal/
+server/db/enyomtatas-dev.0
+server/db/enyomtatas-dev.ns
+server/db/local.0
+server/db/local.ns
+server/db/mongod.lock
+server/db/storage.bson

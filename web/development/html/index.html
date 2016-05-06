@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html ng-app="enyomtatas">
+<head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1"/> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+  <meta name="description" content=""/>
+  <meta name="author" content=""/>
+
+  <title>Printly - online nyomtatás</title>
+
+  <!-- IMPORTANT NOTE: FONT LOAD IS HEAVY -->
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,800,800italic,700italic,700,600italic,600,400italic|Fira+Sans:400,700italic,700,500italic,500,400italic,300italic,300|Poppins:400,600,700,300,500' rel='stylesheet' type='text/css'>
+
+  <link href="//fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css"/>
+  <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-static-top my-navbar" role="navigation">
+      <div class="container">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand branditem" href="#">
+                <!-- <p>eNyomtatás <span>/ Másoló Futár</span></p> -->
+                <p>Printly <span></span></p>
+                  <!-- <img src="http://placehold.it/150x50&text=Logo" alt=""> -->
+              </a>
+          </div>
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav navbar-right">
+                  <li>
+                      <a href="#" class="menuitem">Signup</a>
+                  </li>
+                  <li>
+                      <a href="#" class="menuitem">Login</a>
+                  </li>
+                  <!-- <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Tamás Soós <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">Action</a></li>
+                      <li><a href="#">Another action</a></li>
+                      <li><a href="#">Something else here</a></li>
+                      <li role="separator" class="divider"></li>
+                      <li><a href="#">Separated link</a></li>
+                    </ul>
+                  </li> -->
+              </ul>
+          </div>
+          <!-- /.navbar-collapse -->
+      </div>
+      <!-- /.container -->
+  </nav>
+
+  <!-- Step indicator -->
+  <div class="container step-indicator hidden-xs">
+    <div class="row">
+      <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+          <div class="row bs-wizard" style="border-bottom:0;">
+            <!-- complete / active / disabled -->
+            <div class="col-sm-2 col-sm-offset-1 bs-wizard-step active">
+              <!-- <div class="text-center bs-wizard-stepnum">Feltöltés</div> -->
+              <div class="progress"><div class="progress-bar"></div></div>
+              <a href="#" class="bs-wizard-dot"></a>
+              <div class="bs-wizard-info text-center">File upload</div>
+            </div>
+            
+            <div class="col-sm-2 bs-wizard-step disabled"><!-- complete -->
+              <!-- <div class="text-center bs-wizard-stepnum">Nyomtatási beállítások</div> -->
+              <div class="progress"><div class="progress-bar"></div></div>
+              <a href="#" class="bs-wizard-dot"></a>
+              <div class="bs-wizard-info text-center">Document settings</div>
+            </div>
+            
+            <div class="col-sm-2 bs-wizard-step disabled"><!-- complete -->
+              <!-- <div class="text-center bs-wizard-stepnum">Step 3</div> -->
+              <div class="progress"><div class="progress-bar"></div></div>
+              <a href="#" class="bs-wizard-dot"></a>
+              <div class="bs-wizard-info text-center">Address</div>
+            </div>
+            
+            <div class="col-sm-2 bs-wizard-step disabled"><!-- active -->
+              <!-- <div class="text-center bs-wizard-stepnum">Step 4</div> -->
+              <div class="progress"><div class="progress-bar"></div></div>
+              <a href="#" class="bs-wizard-dot"></a>
+              <div class="bs-wizard-info text-center">Payment</div>
+            </div>
+
+            <div class="col-sm-2 bs-wizard-step disabled"><!-- active -->
+              <!-- <div class="text-center bs-wizard-stepnum">Step 5</div> -->
+              <div class="progress"><div class="progress-bar"></div></div>
+              <a href="#" class="bs-wizard-dot"></a>
+              <div class="bs-wizard-info text-center">Checkout</div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- File upload window -->
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 window">
+        <div class="row">
+          <div class="col-sm-7">
+            <h4><i class="fa fa-fw fa-upload"></i> Upload from PC</h4><br>
+            <form action="/file-upload" class="dropzone">
+              <div class="fallback">
+                <input name="file" type="file" multiple />
+              </div>
+            </form>
+            <div class="table table-striped" class="files" id="previews">
+
+              <div id="template" class="file-row">
+                <!-- This is used as the file preview template -->
+                <div>
+                    <span class="preview"><img data-dz-thumbnail /></span>
+                </div>
+                <div>
+                    <p class="name" data-dz-name></p>
+                    <strong class="error text-danger" data-dz-errormessage></strong>
+                </div>
+                <div>
+                    <p class="size" data-dz-size></p>
+                    <div class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                      <div class="progress-bar progress-bar-success" style="width:0%;" data-dz-uploadprogress></div>
+                    </div>
+                </div>
+                <div>
+                  <button class="btn btn-primary start">
+                      <i class="glyphicon glyphicon-upload"></i>
+                      <span>Start</span>
+                  </button>
+                  <button data-dz-remove class="btn btn-warning cancel">
+                      <i class="glyphicon glyphicon-ban-circle"></i>
+                      <span>Cancel</span>
+                  </button>
+                  <button data-dz-remove class="btn btn-danger delete">
+                    <i class="glyphicon glyphicon-trash"></i>
+                    <span>Delete</span>
+                  </button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="col-sm-5">
+            <h4><i class="fa fa-fw fa-cloud-upload"></i> Upload from cloud</h4><br>
+            <div class="col-xs-10 col-xs-offset-1 cloud-upload google">
+              <div class="logo"><i class="fa fa-fw fa-google"></i></div>
+              <div class="text"><p>Google Drive</p></div>
+            </div>
+            <div class="col-xs-10 col-xs-offset-1 cloud-upload dropbox">
+              <div class="logo "><i class="fa fa-fw fa-dropbox"></i></div>
+              <div class="text "><p>Dropbox</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12">
+            <hr>
+            <a href="./docsetup.html" class="btn btn-primary pull-right nextbutton">Next <i class="fa fa-angle-right"></i></a>
+            <!-- <a href="#" class="btn btn-link pull-right">Vissza</a> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Custom Dropzone -->
+  <script type="text/javascript">
+  // Get the template HTML and remove it from the doumenthe template HTML and remove it from the doument
+  var previewNode = document.querySelector("#template");
+  previewNode.id = "";
+  var previewTemplate = previewNode.parentNode.innerHTML;
+  previewNode.parentNode.removeChild(previewNode);
+
+  var myDropzone = new Dropzone(document.body, { // Make the whole body a dropzone
+    url: "/target-url", // Set the url
+    thumbnailWidth: 80,
+    thumbnailHeight: 80,
+    parallelUploads: 20,
+    previewTemplate: previewTemplate,
+    autoQueue: false, // Make sure the files aren't queued until manually added
+    previewsContainer: "#previews", // Define the container to display the previews
+    clickable: ".fileinput-button" // Define the element that should be used as click trigger to select files.
+  });
+
+  myDropzone.on("addedfile", function(file) {
+    // Hookup the start button
+    file.previewElement.querySelector(".start").onclick = function() { myDropzone.enqueueFile(file); };
+  });
+
+  // Update the total progress bar
+  myDropzone.on("totaluploadprogress", function(progress) {
+    document.querySelector("#total-progress .progress-bar").style.width = progress + "%";
+  });
+
+  myDropzone.on("sending", function(file) {
+    // Show the total progress bar when upload starts
+    document.querySelector("#total-progress").style.opacity = "1";
+    // And disable the start button
+    file.previewElement.querySelector(".start").setAttribute("disabled", "disabled");
+  });
+
+  // Hide the total progress bar when nothing's uploading anymore
+  myDropzone.on("queuecomplete", function(progress) {
+    document.querySelector("#total-progress").style.opacity = "0";
+  });
+
+  // Setup the buttons for all transfers
+  // The "add files" button doesn't need to be setup because the config
+  // `clickable` has already been specified.
+  document.querySelector("#actions .start").onclick = function() {
+    myDropzone.enqueueFiles(myDropzone.getFilesWithStatus(Dropzone.ADDED));
+  };
+  document.querySelector("#actions .cancel").onclick = function() {
+    myDropzone.removeAllFiles(true);
+  };
+  </script>
+
+  <!-- Angular.js -->
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+  <!-- Dropzone.js -->
+  <script src="./js/dropzone.js"></script>
+  <!-- jQuery -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <!-- Bootstrap -->
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+</body>
+
+</html>

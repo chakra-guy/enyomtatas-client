@@ -1,0 +1,31 @@
+{
+  "name": "enyomtatas-client",
+  "version": "1.0.0",
+  "description": "Fronted of enyomtatas",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/enyomtatas/enyomtatas-client.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/enyomtatas/enyomtatas-client#readme",
+  "dependencies": {
+    "express": "^4.13.3"
+  },
+  "devDependencies": {
+    "bootlint": "^0.12.0",
+    "browser-sync": "^2.9.7",
+    "gulp": "^3.9.0",
+    "gulp-bootlint": "^0.6.4",
+    "gulp-clean": "^0.3.1",
+    "gulp-imageoptim": "^0.3.3",
+    "gulp-jade": "^1.1.0",
+    "gulp-sass": "^2.0.4",
+    "gulp-sync": "^0.1.4",
+    "jade": "^1.11.0"
+  }
+}
